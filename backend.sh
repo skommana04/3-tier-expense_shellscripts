@@ -58,7 +58,7 @@ validate_check $? "change directory to /app"
 
 
 echo $project_adirectory
-project_adirectory=$(pwd)
+#project_adirectory=$(pwd)
 echo $project_adirectory
 
 unzip /tmp/backend.zip
