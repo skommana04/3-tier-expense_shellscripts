@@ -8,7 +8,7 @@ N="\e[0m"
 a=$(id -u)
 if [ $a -ne 0 ]
 then
-    echo -e " $R You must be a root user"
+    echo -e " $R You must be a root user $N"
     exit 1
 fi
 
@@ -16,10 +16,10 @@ validate_check()
 {
 if [ $1 -ne 0 ]
 then
-    echo -e "$2  $R failed"
+    echo -e "$2  $R failed $N"
     exit 1
 else
-    echo -e "$2 $G successful"
+    echo -e "$2 $G successful $N"
 fi
 }
 
