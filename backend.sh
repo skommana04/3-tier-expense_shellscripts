@@ -6,11 +6,14 @@ then
     exit 1
 fi
 
+project_adirectory=$(pwd)
+echo $project_adirectory
 validate_check()
 {
 if [ $1 -ne 0 ]
 then
-    echo -e "$2  $R failed $N"
+    echo -e "$2  $R failed $N":q
+
     exit 1
 else
     echo -e "$2 $G successful $N"
@@ -38,6 +41,11 @@ validate_check $? "backend code download"
 
 cd /app
 validate_check $? "change directory to /app"
+
+
+echo $project_adirectory
+project_adirectory=$(pwd)
+echo $project_adirectory
 
 unzip /tmp/backend.zip
 validate_check $? "unzip backend code"
