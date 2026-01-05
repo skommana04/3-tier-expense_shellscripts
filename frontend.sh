@@ -5,6 +5,7 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+#pwd=/home/ec2-user/3-tier-expense_shellscripts
 project_adirectory=$(pwd)
 a=$(id -u)
 if [ $a -eq 0 ]
@@ -15,7 +16,8 @@ else
     exit 1
 fi
 
-validate_check() {
+validate_check() 
+{
     if [ $1 -eq 0 ]
     then
         echo -e " $G $2 successful $N"
