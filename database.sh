@@ -1,5 +1,12 @@
 #!/bin/bash/
 
+a=$(id -u)
+if [ $a -ne 0 ]
+then
+    echo "You must be a root user"
+    exit 1
+fi
+
 validate_check()
 {
 if [ $1 -ne 0 ]
