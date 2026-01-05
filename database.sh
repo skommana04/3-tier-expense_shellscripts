@@ -1,9 +1,14 @@
 #!/bin/bash
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
+
 
 a=$(id -u)
 if [ $a -ne 0 ]
 then
-    echo "You must be a root user"
+    echo -e " $R You must be a root user"
     exit 1
 fi
 
@@ -11,10 +16,10 @@ validate_check()
 {
 if [ $1 -ne 0 ]
 then
-    echo "$2 failed"
+    echo -e "$2  $R failed"
     exit 1
 else
-    echo "$2 successful"
+    echo -e "$2 $G successful"
 fi
 }
 
