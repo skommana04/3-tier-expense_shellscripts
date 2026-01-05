@@ -49,7 +49,7 @@ validate_check $? "change directory to nginx html"
 unzip /tmp/frontend.zip
 validate_check $? "frontend code unzip"
 
-cp $project_adirectory/expense.conf /etc/nginx/conf.d/expense.conf
+cp $project_adirectory/expense.conf /etc/nginx/default.d/expense.conf
 validate_check $? "nginx configuration copy"
 
 systemctl restart nginx
