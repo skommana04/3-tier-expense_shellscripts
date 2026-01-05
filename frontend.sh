@@ -23,6 +23,7 @@ validate_check()
         echo -e " $G $2 successful $N"
     else
         echo -e " $R $2 failed $N"
+    fi
 }
 
 
