@@ -1,4 +1,4 @@
-#!/bin/bash/
+#!/bin/bash
 
 a=$(id -u)
 if [ $a -ne 0 ]
