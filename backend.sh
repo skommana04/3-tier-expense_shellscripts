@@ -47,7 +47,7 @@ else
     validate_check $? "expense user creation"
 fi
 
-mkdir /app
+mkdir -p /app
 validate_check $? "app directory creation"
 
 curl -o /tmp/backend.zip https://expense-joindevops.s3.us-east-1.amazonaws.com/expense-backend-v2.zip
